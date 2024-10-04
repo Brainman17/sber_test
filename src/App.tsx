@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import s from './App.module.css'
+import Slider from "./components/Slider/Slider.tsx";
+import { useEffect, useState } from "react";
+import { Slides } from "./types/types.ts";
+import Spinner from "./components/Spinner/Spinner.tsx";
+import jsonData from './data/slides.json'
+import { BASE_URL } from "./constants/constants.ts";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    const [slides, setSlides] = useState<Slides[] | undefined>(undefined);
+    const [_error, setError] = useState<string | null>(null)
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await fetch(`${BASE_URL}2ac30afd-d98b-4edd-96be-2c84694e34ce`)
+                const data = await response.json()
+
+                setSlides(data);
+            } catch (error: unknown) {
+                if (error instanceof Error) {
+                    setError(error.message)
+                    setSlides(jsonData)
+                }
+            } finally {
+                setIsLoading(false)
+            }
+        })();
+    }, []);
+
+    if (!slides) {
+        return null
+    }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={s.app}>
+          {isLoading ? <Spinner /> : <Slider slides={slides} />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  )  
 }
 
 export default App

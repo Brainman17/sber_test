@@ -1,51 +1,51 @@
 @font-face {
-    font-family: Jost;
-    font-feature-settings: "smps" on;
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    font-stretch: normal;
-    src:
-            url("/font/Jost-SemiBold.woff2") format("woff2"),
-            url("/font/Jost-SemiBold.woff") format("woff");
-    unicode-range: U+00-FF, U+980-9FF;
+  font-family: Jost;
+  font-feature-settings: "smps" on;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url("/font/Jost-SemiBold.woff2") format("woff2"),
+    url("/font/Jost-SemiBold.woff") format("woff");
+  unicode-range: U+00-FF, U+980-9FF;
 }
 
 @font-face {
-    font-family: Jost;
-    font-feature-settings: "smps" on;
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    font-stretch: normal;
-    src:
-            url("/font/Jost-Regular.woff2") format("woff2"),
-            url("/font/Jost-Regular.woff") format("woff");
-    unicode-range: U+00-FF, U+980-9FF;
+  font-family: Jost;
+  font-feature-settings: "smps" on;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url("/font/Jost-Regular.woff2") format("woff2"),
+    url("/font/Jost-Regular.woff") format("woff");
+  unicode-range: U+00-FF, U+980-9FF;
 }
 
 @font-face {
-    font-family: Jost;
-    font-feature-settings: "smps" on;
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-    font-stretch: normal;
-    src:
-            url("/font/Jost-Bold.woff2") format("woff2"),
-            url("/font/Jost-Bold.woff") format("woff");
-    unicode-range: U+00-FF, U+980-9FF;
+  font-family: Jost;
+  font-feature-settings: "smps" on;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url("/font/Jost-Bold.woff2") format("woff2"),
+    url("/font/Jost-Bold.woff") format("woff");
+  unicode-range: U+00-FF, U+980-9FF;
 }
 
 @font-face {
-    font-family: Jost;
-    font-feature-settings: "smps" on;
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-    font-stretch: normal;
-    src:
-            url("/font/Jost-Medium.woff2") format("woff2"),
-            url("/font/Jost-Medium.woff") format("woff");
-    unicode-range: U+00-FF, U+980-9FF;
+  font-family: Jost;
+  font-feature-settings: "smps" on;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url("/font/Jost-Medium.woff2") format("woff2"),
+    url("/font/Jost-Medium.woff") format("woff");
+  unicode-range: U+00-FF, U+980-9FF;
 }
